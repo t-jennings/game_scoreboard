@@ -9,6 +9,8 @@ class Counter extends Component {
     this.state = {
       score: 0
     };
+    this.decrementScore = this.decrementScore.bind(this);
+    this.incrementScore = this.incrementScore.bind(this);
   }
   incrementScore() {
     this.setState({ score: this.state.score + 1 })
@@ -21,9 +23,9 @@ class Counter extends Component {
   render() {
     return (
       <div className="counter">
-        <button className="counter-action decrement" onClick={this.decrementScore.bind(this)}> - </button>
+        <button className="counter-action decrement" onClick={this.decrementScore}> - </button>
         <div className="counter-score"> {this.state.score} </div>
-        <button className="counter-action increment" onClick={this.incrementScore.bind(this)}> + </button>
+        <button className="counter-action increment" onClick={this.incrementScore}> + </button>
       </div>
     )
   }
@@ -72,6 +74,7 @@ class Scoreboard extends Component {
         players:newPlayersArray,
         value: '',
       });
+      document.getElementById('no-players').style.display = "none";
     } else {
       document.getElementById('error').classList.add('flash-error');
       setTimeout(function() {
@@ -87,6 +90,7 @@ class Scoreboard extends Component {
       players: [],
       value: '',
     });
+    document.getElementById('no-players').style.display = "block";
   }
   render() {
     return (
@@ -114,6 +118,7 @@ class Scoreboard extends Component {
               <header className="header">
                 <h1>Game Scoreboard</h1>
               </header>
+              <div id="no-players">There are No Players</div>
               {
                 this.state.players.map((player) => 
                   <Player name={player.name} score={player.score} key={player.id} />

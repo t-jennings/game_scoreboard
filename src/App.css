@@ -12,6 +12,11 @@ body {
   margin-bottom: 0;
 }
 
+#no-players {
+  text-align: center;
+  padding: 15px;
+}
+
 
 #error {
   opacity: 0;
