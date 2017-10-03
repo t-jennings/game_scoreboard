@@ -1,17 +1,71 @@
 body {
   background: #d5d5d5; 
   font-family: arial;
-  color: #FAFAFA;
   text-transform: uppercase;
+}
+
+#root {
+  margin: 75px 0;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+
+#error {
+  opacity: 0;
+  margin-bottom: 10px;
+}
+
+#error.flash-error {
+  animation-name: flash;
+  animation-duration: 1s;
+}
+
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .scoreboard {
   background: #333;
-  max-width: 700px;
-  margin: 70px auto;
   box-shadow: 0 4px 0px #333;
   border-radius: 15px;
   padding-bottom: 5px;
+  color: #FAFAFA;
 }
 
 .header {
