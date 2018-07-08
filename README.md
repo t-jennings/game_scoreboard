@@ -1,1 +1,1 @@
-A simple game scoreboard with React.
+A simple game scoreboard with React - [Demo here]: https://www.trevorjennigs.ca/scoreboard/

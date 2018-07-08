@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Player from '../player/Player.js';
 import './Scoreboard.css';
 
