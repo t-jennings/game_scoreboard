@@ -1,56 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './App.css';
-
-
-class Counter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      score: 0
-    };
-    this.decrementScore = this.decrementScore.bind(this);
-    this.incrementScore = this.incrementScore.bind(this);
-  }
-  incrementScore() {
-    this.setState({ score: this.state.score + 1 })
-  }
-  decrementScore() {
-    if(this.state.score !== 0) {
-      this.setState({ score: this.state.score - 1 })
-    }
-  }
-  render() {
-    return (
-      <div className="counter">
-        <button className="counter-action decrement" onClick={this.decrementScore}> - </button>
-        <div className="counter-score"> {this.state.score} </div>
-        <button className="counter-action increment" onClick={this.incrementScore}> + </button>
-      </div>
-    )
-  }
-}
-
-
-class Player extends Component {
-  render() {
-    return (
-      <div className="player">
-        <div className="player-name">
-          {this.props.name}
-        </div>
-        <Counter />
-      </div>
-    )
-  }  
-}
-
-Player.propTypes = {
-  name: PropTypes.string.isRequired,
-}
-
+import Player from '../player/Player.js';
+import './Scoreboard.css';
 
 class Scoreboard extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -61,6 +15,7 @@ class Scoreboard extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.clearScoreboard = this.clearScoreboard.bind(this);
   }
+
   handleSubmit(event) {
     event.preventDefault();
     if(this.state.value !== '') {
@@ -82,9 +37,11 @@ class Scoreboard extends Component {
       }, 1000);
     }
   }
+
   handleChange(event) {
     this.setState({value: event.target.value});
   }
+
   clearScoreboard() {
     this.setState({
       players: [],
@@ -92,6 +49,7 @@ class Scoreboard extends Component {
     });
     document.getElementById('no-players').style.display = "block";
   }
+
   render() {
     return (
       <div className="container">
@@ -130,16 +88,7 @@ class Scoreboard extends Component {
       </div>  
     )
   }
+  
 }
 
-
-class App extends Component {
-  render() {
-    return (
-      <Scoreboard />
-    );
-  }
-}
-
-
-export default App;
+export default Scoreboard;

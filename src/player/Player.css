@@ -1,0 +1,11 @@
+.player {
+  display: flex;
+  font-size: 1.2em;
+  border-bottom: solid 2px #444;
+  letter-spacing: 2px;
+}
+
+.player-name {
+   flex-grow: 1;
+   padding: 20px 10px 10px 10px;
+}
