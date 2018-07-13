@@ -20,8 +20,9 @@ class Scoreboard extends Component {
     if(this.state.value !== '') {
       let newPlayersArray = this.state.players.slice();  
       let newPlayer = { 
-        name: this.state.value, 
-        id: 3
+        name: this.state.value,
+        id: this.state.players.length + 1,
+        score: 0
       };
       newPlayersArray.push(newPlayer);   
       this.setState({
@@ -53,7 +54,7 @@ class Scoreboard extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-xs-12 col-md-4">
+          <div className="col-xs-12">
             <div>
               <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
@@ -66,11 +67,11 @@ class Scoreboard extends Component {
               </form>
               <div className="text-danger" id="error"><strong>Field is empty!</strong></div>
             </div>
-            <div>
+            <div className="clear-scoreboard">
               <button type="submit" className="btn btn-danger" onClick={this.clearScoreboard}>Clear Scoreboard</button>
             </div>  
           </div>
-          <div className="col-xs-12 col-md-8">  
+          <div className="col-xs-12 col-md-10">  
             <div className="scoreboard">
               <header className="header">
                 <h1>Game Scoreboard</h1>

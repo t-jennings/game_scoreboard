@@ -6,7 +6,7 @@ import './Player.css';
 class Player extends Component {
   render() {
     return (
-      <div className="player">
+      <div className="player clearfix">
         <div className="player-name">
           {this.props.name}
         </div>

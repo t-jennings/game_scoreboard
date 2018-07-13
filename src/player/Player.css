@@ -1,11 +1,24 @@
 .player {
-  display: flex;
-  font-size: 1.2em;
+  font-size: 1.25em;
   border-bottom: solid 2px #444;
   letter-spacing: 2px;
 }
 
 .player-name {
-   flex-grow: 1;
-   padding: 20px 10px 10px 10px;
+   width: 40%;
+   float: left;
+   padding: 20px 20px;
 }
+
+.clearfix {
+   display: block;
+   content: "";
+   clear: both;
+}
+
+
+@media only screen and (min-width: 992px) {
+  .player-name {
+     width: 70%;
+   }
+} 
