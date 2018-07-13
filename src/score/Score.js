@@ -48,20 +48,27 @@ class Score extends Component {
   }
   render() {
     return (
-      <div className="score">
-        <button className="score-action decrement" onClick={this.decrementScore}> - </button>
-        <div className="score-score" id="scoreScore" onClick={this.showEditScore}> {this.state.score} 
+      <div className="score-container">
+        <button 
+           className="score-action decrement" 
+           onClick={this.decrementScore}> - 
+        </button>
+        <div 
+           className="score" 
+           onClick={this.showEditScore}> {this.state.score} 
         </div>
         <input 
           type="text" 
           maxLength="8"
-          className="form-control edit-score" 
+          className="form-control edit-score"
           value={this.state.score} 
           onChange={this.editScore} 
           onBlur={this.hideEditScore}
           onKeyUp={this.hideEditScoreOnEnter} 
         />
-        <button className="score-action increment" onClick={this.incrementScore}> + </button>
+        <button 
+           className="score-action increment" 
+           onClick={this.incrementScore}> + </button>
       </div>
     )
   }
