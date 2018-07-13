@@ -1,11 +1,11 @@
-.counter {
+.score {
   float: left;
   width: 60%;
   position: relative;
   height: 65px;
 }
 
-.counter-action {
+.score-action {
   border: none;
   position: absolute;
   font-weight: bold;
@@ -19,29 +19,29 @@
   user-select: none;
 }
 
-.counter-action.increment {
+.score-action.increment {
   background: #66BB6A;
   right: 0;
   top: 0;
 }
 
-.counter-action.increment:hover {
+.score-action.increment:hover {
   background: #549d59;
   cursor: pointer;
 }
 
-.counter-action.decrement {
+.score-action.decrement {
   background: #ef5350;
   left: 0;
   top: 0;
 }
 
-.counter-action.decrement:hover {
+.score-action.decrement:hover {
   background: #c44442;
   cursor: pointer;
 }
 
-.counter-score {
+.score-score {
   background: #2b2b2b;
   color: #FAFAFA;
   text-align: center;
@@ -64,7 +64,7 @@
 }
 
 @media only screen and (min-width: 992px) {
-  .counter {
+  .score {
      width: 30%;
    }
 } 

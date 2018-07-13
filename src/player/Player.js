@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Counter from '../counter/Counter.js';
+import Score from '../score/Score.js';
 import './Player.css';
 
 class Player extends Component {
@@ -10,7 +10,7 @@ class Player extends Component {
         <div className="player-name">
           {this.props.name}
         </div>
-        <Counter />
+        <Score />
       </div>
     )
   }  

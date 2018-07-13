@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './Counter.css';
+import './Score.css';
 
-class Counter extends Component {
+class Score extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -48,9 +48,9 @@ class Counter extends Component {
   }
   render() {
     return (
-      <div className="counter">
-        <button className="counter-action decrement" onClick={this.decrementScore}> - </button>
-        <div className="counter-score" id="counterScore" onClick={this.showEditScore}> {this.state.score} 
+      <div className="score">
+        <button className="score-action decrement" onClick={this.decrementScore}> - </button>
+        <div className="score-score" id="scoreScore" onClick={this.showEditScore}> {this.state.score} 
         </div>
         <input 
           type="text" 
@@ -61,10 +61,10 @@ class Counter extends Component {
           onBlur={this.hideEditScore}
           onKeyUp={this.hideEditScoreOnEnter} 
         />
-        <button className="counter-action increment" onClick={this.incrementScore}> + </button>
+        <button className="score-action increment" onClick={this.incrementScore}> + </button>
       </div>
     )
   }
 }
 
-export default Counter;
+export default Score;
