@@ -1,20 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Score from '../score/Score.js';
 import './Player.css';
 
-class Player extends Component {
-  render() {
-    return (
-      <div className="player clearfix">
-        <div className="player-name">
-          {this.props.name}
-        </div>
-        <Score score={this.props.score}/>
+const Player = (props) => {
+  return (
+    <div className="player clearfix">
+      <div className="player-name">
+        {props.name}
       </div>
-    )
-  }  
-}
+      <Score score={props.score}/>
+    </div>
+  )
+};
 
 Player.propTypes = {
   name: PropTypes.string.isRequired,
