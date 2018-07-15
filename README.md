@@ -1,4 +1,4 @@
-A simple game scoreboard with React - [Demo here link](http://www.trevorjennings.ca/scoreboard/)
+A simple game scoreboard with React - [Demo here](http://www.trevorjennings.ca/scoreboard/)
 
 Demonstrates:
 
