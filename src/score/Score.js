@@ -5,7 +5,7 @@ class Score extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      score: 0
+      score: this.props.score
     };
     this.decrementScore = this.decrementScore.bind(this);
     this.incrementScore = this.incrementScore.bind(this);

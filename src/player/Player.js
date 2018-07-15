@@ -10,7 +10,7 @@ class Player extends Component {
         <div className="player-name">
           {this.props.name}
         </div>
-        <Score />
+        <Score score={this.props.score}/>
       </div>
     )
   }  
@@ -18,6 +18,7 @@ class Player extends Component {
 
 Player.propTypes = {
   name: PropTypes.string.isRequired,
+  score: PropTypes.number.isRequired
 }
 
 export default Player;
